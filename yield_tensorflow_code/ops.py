@@ -11,7 +11,7 @@ import utils
 
 
 with open('config.json') as file:
-	config = file.read()
+	config = json.load(file)
 	model_config = json.loads(config)
     
 model_weights = np.load(model_config['model_name'] + '.npy', encoding='latin1').item()
